@@ -11,10 +11,10 @@ function add(num1, num2) {
     const smallerArr = isFirstValueBigger ? separatedNum2 : separatedNum1
     
     calculatedPart = smallerArr.reduce((acc, _, currentIndex) => {
-      const val = biggerArr[currentIndex] + smallerArr[currentIndex] 
+      const val = biggerArr[currentIndex] + smallerArr[currentIndex]
       return `${val}${acc}`
     }, "")
     remainder = String(biggerNumber).split('').slice(0, biggerArr.length - smallerArr.length)
    
-    return Number(`${remainder}${calculatedPart}`)
+    return Number(`${remainder}${calculatedPart}`.replace(',', ''))
   }
