@@ -1,12 +1,12 @@
 function rememberTheOrderOfVisitedCity(routes) {
-	let orderOfVisitedCity = []
+  let orderOfVisitedCity = []
   
   const firstCity = routes.reduce((detectedFirstCity, route, index, array)=>{ 
-  	const startPoint = route[0]
+    const startPoint = route[0]
     let includedRoutes = 0
     
     array.forEach((currentRoute)=>{
-    	if (currentRoute.some(el => el === startPoint)) {
+      if (currentRoute.some(el => el === startPoint)) {
       	includedRoutes += 1
       }
     })
@@ -17,13 +17,13 @@ function rememberTheOrderOfVisitedCity(routes) {
   
   orderOfVisitedCity.push(firstCity[0])
 
-	const result = routes.reduce((result, currentRoute, index, array) => {
+  const result = routes.reduce((result, currentRoute, index, array) => {
     const finishCityByPrevRoute = result[result.length - 1]
     
     array.forEach(city => {
-    	const startCityByRoute = city[0]
-    	if (finishCityByPrevRoute === startCityByRoute) {
-      	result.push(city[1])
+      const startCityByRoute = city[0]
+      if (finishCityByPrevRoute === startCityByRoute) {
+        result.push(city[1])
       }
     })
     
