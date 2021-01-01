@@ -33,9 +33,9 @@ function calc(arr) {
     }, 0);
 }
 
-const fakePrices_1 = [1, 2, 3, 4, 5, 6]; // 15
-const fakePrices_2 = [1, 2, 3, 1, 4, 6]; // 11
-const fakePrices_3 = [1, 6, 5, 10, 8, 7]; // 18
+const fakePrices_1 = [1, 2, 3, 4, 5, 6];
+const fakePrices_2 = [1, 2, 3, 1, 4, 6];
+const fakePrices_3 = [1, 6, 5, 10, 8, 7];
 
 console.log(calc(fakePrices_1));
 console.log(calc(fakePrices_2));
